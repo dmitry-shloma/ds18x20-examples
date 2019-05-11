@@ -5,7 +5,8 @@
 #include <avr/pgmspace.h>
 #include <avr/eeprom.h>
 #include <avr/interrupt.h>
-#include "LCD.h"
+
+#include "lcd.h"
 
 /*
   Отправляет младшую половину байта byte в LCD. Если state == 0,
@@ -275,7 +276,7 @@ void lcdLoadCharacterf(char code, char *pattern) {
 /*
   Загружает символ из eeprom в знакогенератор.
  */
-void lcdLoadCharactere(char code, uint8_t *pattern) {
+void lcdLoadCharactere(char code, char *uint8_t) {
   while (lcdIsBusy());
 
   lcdRawSendByte((code << 3) | 0b01000000, LCD_COMMAND);
@@ -283,7 +284,7 @@ void lcdLoadCharactere(char code, uint8_t *pattern) {
   for (char i = 0; i <= 7; i++) {
     while (lcdIsBusy());
 
-    lcdRawSendByte(eeprom_read_byte(pattern++), LCD_DATA);
+    lcdRawSendByte(eeprom_read_byte(uint8_t++), LCD_DATA);
   }
   while (lcdIsBusy());
   lcdRawSendByte(0b10000000, LCD_COMMAND);

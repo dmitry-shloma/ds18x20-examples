@@ -35,6 +35,8 @@
 
 #define DELAY              1
 
+#include <stdint.h>
+
 void lcdSendNibble(char byte, char state);
 char lcdGetNibble(char state);
 char lcdRawGetByte(char state);
@@ -51,6 +53,6 @@ void lcdPutsf(char *str);
 void lcdPutse(uint8_t *str);
 void lcdLoadCharacter(char code, char *pattern);
 void lcdLoadCharacterf(char code, char *pattern);
-void lcdLoadCharactere(char code, char *pattern);
+void lcdLoadCharactere(char code, char *uint8_t);
 
 #endif /* LCD_H_ */

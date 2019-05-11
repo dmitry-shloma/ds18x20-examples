@@ -1,7 +1,8 @@
 TEMPLATE = app
 
 HEADERS = \
-    onewire.h
+    onewire.h \
+    config.h
 
 SOURCES = \
     onewire.c
