@@ -1,5 +1,8 @@
-[Bb]uild
+# dirs
+[Bb]uild*
 
+# QtCreator
+*.pro*user*
+
+# dolphin
 .directory
-
-*.pro.user*
