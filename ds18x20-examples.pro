@@ -7,4 +7,5 @@ OTHER_FILES = \
     .gitignore \
     INSTALL \
     LICENSE \
-    README
+    README \
+    build.sh
