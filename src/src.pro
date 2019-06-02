@@ -3,8 +3,7 @@ TEMPLATE = subdirs
 CONFIG += ordered
 
 SUBDIRS = \
-    lcd \
-    onewire \
-    ds18x20-examples
-
-
+    libonewire \
+    libds18s20 \
+    libcharlcd \
+    ds18x20

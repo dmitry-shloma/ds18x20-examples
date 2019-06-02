@@ -1,8 +1,7 @@
-# dirs
 [Bb]uild*
+!build.sh
+!build.bat
 
-# QtCreator
 *.pro*user*
 
-# dolphin
 .directory

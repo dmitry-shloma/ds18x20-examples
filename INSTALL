@@ -1,0 +1,4 @@
+avr-gcc --std=c99 -mmcu=atmega8 -g -Os -c ./charlcd.c
+avr-gcc --std=c99 -mmcu=atmega8 -g -Os -c ./onewire.c
+avr-gcc --std=c99 -g -mmcu=atmega8 charlcd.o onewire.o ds18s20.o ./main.c -o ds18x20.elf
+avr-objcopy -j .text -j .data -O ihex ds18x20.elf ds18x20.hex
